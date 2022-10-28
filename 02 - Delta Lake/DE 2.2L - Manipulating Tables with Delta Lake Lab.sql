@@ -276,7 +276,7 @@ SELECT * FROM new_beans
 -- MAGIC assert last_version["operation"] == "MERGE", "Transaction should be completed as a merge"
 -- MAGIC 
 -- MAGIC metrics = last_version["operationMetrics"]
--- MAGIC assert metrics["numOutputRows"] == "5", "Make sure you only insert delicious beans"
+-- MAGIC assert metrics["numOutputRows"] == "3", "Make sure you only insert delicious beans"
 -- MAGIC assert metrics["numTargetRowsUpdated"] == "1", "Make sure you match on name and color"
 -- MAGIC assert metrics["numTargetRowsInserted"] == "2", "Make sure you insert newly collected beans"
 -- MAGIC assert metrics["numTargetRowsDeleted"] == "0", "No rows should be deleted by this operation"
